@@ -1,0 +1,117 @@
+Problem_3
+
+rho_L = 
+
+  Quadratic <a href="matlab:helpPopup('optim.problemdef.OptimizationExpression')" style="font-weight:bold">OptimizationExpression</a>
+
+    7800*b*h
+
+
+fn = 
+
+  Nonlinear <a href="matlab:helpPopup('optim.problemdef.OptimizationExpression')" style="font-weight:bold">OptimizationExpression</a>
+
+    (0.15915 .* sqrt(((((210000000000 .* ((b .* h.^3) ./ 12)) .* (1.875 ./ l).^4) .* l) ./ ((b .* h...
+
+  Expression display truncated. See full display with <a href="matlab: helpPopup optim.problemdef.OptimizationExpression/show" style="font-weight:normal">show</a> or <a href="matlab: helpPopup optim.problemdef.OptimizationExpression/write" style="font-weight:normal">write</a>.
+
+
+g2 = 
+
+  Linear <a href="matlab:helpPopup('optim.problemdef.OptimizationInequality')" style="font-weight:bold">OptimizationInequality</a>
+
+    -b <= -0.005
+
+
+g3 = 
+
+  Linear <a href="matlab:helpPopup('optim.problemdef.OptimizationInequality')" style="font-weight:bold">OptimizationInequality</a>
+
+    b <= 0.2
+
+
+g4 = 
+
+  Linear <a href="matlab:helpPopup('optim.problemdef.OptimizationInequality')" style="font-weight:bold">OptimizationInequality</a>
+
+    -l <= -0.5
+
+
+g5 = 
+
+  Linear <a href="matlab:helpPopup('optim.problemdef.OptimizationInequality')" style="font-weight:bold">OptimizationInequality</a>
+
+    l <= 7
+
+
+g6 = 
+
+  Linear <a href="matlab:helpPopup('optim.problemdef.OptimizationInequality')" style="font-weight:bold">OptimizationInequality</a>
+
+    h - b <= 0
+
+
+g8 = 
+
+  Linear <a href="matlab:helpPopup('optim.problemdef.OptimizationInequality')" style="font-weight:bold">OptimizationInequality</a>
+
+    -h <= -0.002
+
+
+g9 = 
+
+  Linear <a href="matlab:helpPopup('optim.problemdef.OptimizationInequality')" style="font-weight:bold">OptimizationInequality</a>
+
+    h <= 0.1
+
+
+  <a href="matlab: helpPopup OptimizationProblem" style="font-weight:normal">OptimizationProblem</a> : 
+
+	<strong>Solve for:</strong>
+       b, h, l
+
+	<strong>minimize :</strong>
+       ((7800 .* l) .* (b .* h))
+
+
+	<strong>subject to constr:</strong>
+       ((0.15915 .* sqrt(((((210000000000 .* ((b .* h.^3) ./ 12)) .* (1.875 ./ l).^4) .* l) ./ ((b .* h)
+       .* 7800)))) - 500) <= 0
+       (0.005 - b) <= 0
+       (b - 0.2) <= 0
+       (0.5 - l) <= 0
+       (l - 7) <= 0
+       (h - b) <= 0
+       (((7800 .* (b .* h)) .* l) - 5) <= 0
+       (0.002 - h) <= 0
+       (h - 0.1) <= 0
+     
+
+
+Solving problem using fmincon.
+
+<a href = "matlab: helpview('optim','feasible_better_objective','CSHelpWindow');">Feasible point with lower objective function value found, but optimality criteria not satisfied. See output.bestfeasible.</a>.
+
+
+<a href = "matlab: helpview('optim','local_min_found','CSHelpWindow');">Local minimum found that satisfies the constraints</a>.
+
+Optimization completed because the objective function is non-decreasing in 
+<a href = "matlab: helpview('optim','feasible_directions','CSHelpWindow');">feasible directions</a>, to within the value of the <a href = "matlab: helpview('optim','optimality_tolerance_msgcsh','CSHelpWindow');">optimality tolerance</a>,
+and constraints are satisfied to within the value of the <a href = "matlab: helpview('optim','constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sqpLineSearch:Exit1basic'},{'optimlib:sqpLineSearch:Exit1detailed','8.614873e-08','1.000000e-06','0.000000e+00','1.000000e-06'},true,true);;">stopping criteria details</a>>
+
+sol = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    b: 0.0050
+    h: 0.0020
+    l: 0.5000
+
+
+fval =
+
+    0.0390
+
+diary off

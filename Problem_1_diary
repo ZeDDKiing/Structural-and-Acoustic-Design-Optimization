@@ -1,0 +1,45 @@
+Problem_1
+
+  <a href="matlab: helpPopup OptimizationProblem" style="font-weight:normal">OptimizationProblem</a> : 
+
+	<strong>Solve for:</strong>
+       L, R2
+
+	<strong>minimize :</strong>
+       ((7800 .* (3.1416 .* (R2.^2 - 0.0064))) .* L)
+
+
+	<strong>subject to constr:</strong>
+       ((0.088 - R2) ./ R2) <= 0
+       ((R2 - 0.1) ./ R2) <= 0
+       ((0.08 - R2) ./ R2) <= 0
+       ((2 - L) ./ L) <= 0
+       ((L - 7) ./ L) <= 0
+       (((50000 ./ (3.1416 .* (R2.^2 - 0.0064))) - 250000000) ./ 250000000) <= 0
+       ((50000 - ((6511318102862.961 .* (R2.^4 - 4.096e-05)) ./ (16 .* L.^2))) ./ 50000) <= 0
+     
+
+
+Solving problem using fmincon.
+
+<a href = "matlab: helpview('optim','local_min_found','CSHelpWindow');">Local minimum found that satisfies the constraints</a>.
+
+Optimization completed because the objective function is non-decreasing in 
+<a href = "matlab: helpview('optim','feasible_directions','CSHelpWindow');">feasible directions</a>, to within the value of the <a href = "matlab: helpview('optim','optimality_tolerance_msgcsh','CSHelpWindow');">optimality tolerance</a>,
+and constraints are satisfied to within the value of the <a href = "matlab: helpview('optim','constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sqpLineSearch:Exit1basic'},{'optimlib:sqpLineSearch:Exit1detailed','7.781514e-09','1.000000e-06','0.000000e+00','1.000000e-06'},true,true);;">stopping criteria details</a>>
+
+sol = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+     L: 2.0001
+    R2: 0.0880
+
+
+fval =
+
+   65.8723
+
+

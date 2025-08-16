@@ -1,0 +1,46 @@
+Problem_2
+
+  <a href="matlab: helpPopup OptimizationProblem" style="font-weight:normal">OptimizationProblem</a> : 
+
+	<strong>Solve for:</strong>
+       L, b, h
+
+	<strong>minimize :</strong>
+       ((7850 .* L) .* (b .* h))
+
+
+	<strong>subject to constr:</strong>
+       (((-250000000) + (((10000 .* L) .* h) ./ (2 .* ((b .* h.^3) ./ 12)))) ./ 250000000) <= 0
+       (((-90000000) + (30000 ./ ((2 .* b) .* h))) ./ 90000000) <= 0
+       ((0.005 - b) ./ 0.005) <= 0
+       ((b - 0.1) ./ 0.1) <= 0
+       ((0.002 - h) ./ 0.002) <= 0
+       ((h - 0.007) ./ 0.007) <= 0
+       ((h - b) ./ 0.5) <= 0
+       ((1.5 - L) ./ 1.5) <= 0
+       ((L - 7) ./ 7) <= 0
+     
+
+
+Solving problem using fmincon.
+
+<a href = "matlab: helpview('optim','solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+fmincon stopped because it exceeded the iteration limit,
+<a href = "matlab: helpview('optim','max_iter','CSHelpWindow');">options.MaxIterations</a> = 1.000000e+03.
+
+
+sol = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    L: 1.4760
+    b: 0.2054
+    h: 0.0283
+
+
+fval =
+
+   67.4319
+
+diary off

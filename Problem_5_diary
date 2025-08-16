@@ -1,0 +1,61 @@
+Problem_5
+
+  <a href="matlab: helpPopup OptimizationProblem" style="font-weight:normal">OptimizationProblem</a> : 
+
+	<strong>Solve for:</strong>
+       A, B
+
+	<strong>minimize :</strong>
+       5600*A + 3959.798*B
+
+
+	<strong>subject to constr:</strong>
+       arg_LHS <= extraParams{1}
+
+       where:
+
+             arg42 = zeros(6, 1);
+             arg43 = ((35355.3391 ./ (1.4142 .* A)) + (35355.3391 ./ (1.4142 .* (A + (1.4142 .* B)))));
+             arg42(1) = ((((35355.3391 ./ (1.4142 .* A)) + (35355.3391 ./ (1.4142 .* (A
+     + (1.4142 .* B))))) - 35000000) ./ arg43);
+             arg42(2) = (((50000 ./ (A + (1.4142 .* B))) - 140000000) ./ (50000 ./ (A + (1.4142 .* B))));
+             arg42(3) = (5e-05 - A);
+             arg42(4) = (A - 0.04);
+             arg42(5) = (5e-05 - B);
+             arg42(6) = (B - 0.04);
+             arg_LHS = arg42(:);
+
+       <a href="matlab: fprintf('  extraParams{1}:\n\n     0\n     0\n     0\n     0\n     0\n     0\n\n\n')">extraParams</a>
+
+	<strong>subject to constr1:</strong>
+       (0.000125 - (50000 ./ (70000000000 .* A))) == 0
+       (0.000125 - (50000 ./ (70000000000 .* (A + (1.4142 .* B))))) == 0
+     
+
+
+Solving problem using fmincon.
+
+<a href = "matlab: helpview('optim','no_feasible_point','CSHelpWindow');">Converged to an infeasible point</a>.
+
+fmincon stopped because the <a href = "matlab: helpview('optim','norm_curr_step_simple_fminconip','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a> but constraints are not
+satisfied to within the value of the <a href = "matlab: helpview('optim','constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sqpLineSearch:ExitNeg22basic','fmincon'},{'optimlib:sqpLineSearch:ExitNeg22detailed','1.000000e-10','3.214070e-06','1.000000e-06'},true,true);;">stopping criteria details</a>>
+
+Consider enabling the interior point method <a href = "matlab: helpview('optim','csh_feasibility_mode','CSHelpWindow');">feasibility mode</a>.
+
+
+sol = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    A: 0.0056
+    B: 5.0000e-05
+
+
+fval =
+
+   31.3958
+
+diary off

@@ -1,0 +1,48 @@
+Problem_4
+
+  <a href="matlab: helpPopup OptimizationProblem" style="font-weight:normal">OptimizationProblem</a> : 
+
+	<strong>Solve for:</strong>
+       wb, wh
+
+	<strong>minimize :</strong>
+       wb*wh
+
+
+	<strong>subject to constr:</strong>
+       -wb <= -0.6
+       wb <= 3
+       -wh <= -0.4
+       wh <= 1.5
+
+	<strong>subject to constr1:</strong>
+       (((0.0041736 + ((wb .* wh) .* 0.0063096)) ./ (15.75 + (wb .* wh))) - 0.001) == 0
+     
+
+
+Solving problem using fmincon.
+
+<a href = "matlab: helpview('optim','feasible_better_objective','CSHelpWindow');">Feasible point with lower objective function value found, but optimality criteria not satisfied. See output.bestfeasible.</a>.
+
+
+<a href = "matlab: helpview('optim','local_min_found','CSHelpWindow');">Local minimum found that satisfies the constraints</a>.
+
+Optimization completed because the objective function is non-decreasing in 
+<a href = "matlab: helpview('optim','feasible_directions','CSHelpWindow');">feasible directions</a>, to within the value of the <a href = "matlab: helpview('optim','optimality_tolerance_msgcsh','CSHelpWindow');">optimality tolerance</a>,
+and constraints are satisfied to within the value of the <a href = "matlab: helpview('optim','constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sqpLineSearch:Exit1basic'},{'optimlib:sqpLineSearch:Exit1detailed','2.617239e-16','1.000000e-06','8.281897e-09','1.000000e-06'},true,true);;">stopping criteria details</a>>
+
+sol = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    wb: 1.6968
+    wh: 1.2849
+
+
+fval =
+
+    2.1803
+
+diary off
